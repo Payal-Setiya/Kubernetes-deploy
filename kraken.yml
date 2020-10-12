@@ -1,9 +1,9 @@
 ---
-- hosts: orchestration
+- hosts: Master
   gather_facts: true
-  remote_user: "{{ orchestration_user }}"
+  remote_user: "{{ centos }}"
   vars_files:
-   - vars/kraken_vars.yml
+   - kraken_vars.yml
 
   tasks:
   - name: Git clone kraken repository
