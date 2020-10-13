@@ -1,7 +1,7 @@
 ---
 - hosts: Master
   gather_facts: true
-  remote_user: "{{ centos }}"
+  remote_user: "{{ root }}"
   vars_files:
    - kraken_vars.yml
 
