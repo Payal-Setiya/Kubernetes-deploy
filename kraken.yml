@@ -1,5 +1,5 @@
 ---
-- hosts: Master
+- hosts: 34.229.64.137
   gather_facts: true
   #remote_user:  root
   #become: yes
