@@ -1,8 +1,8 @@
 ###############################################################################
 # Ansible SSH variables.
 ###############################################################################
-ansible_public_key_file: "{{ lookup('env', 'PUBLIC_KEY')|default('~/.ssh/id_rsa.pub', true) }}"
-ansible_private_key_file: "{{ lookup('env', 'PRIVATE_KEY')|default('~/.ssh/id_rsa', true) }}"
+#ansible_public_key_file: "{{ lookup('env', 'PUBLIC_KEY')|default('~/.ssh/id_rsa.pub', true) }}"
+#ansible_private_key_file: "{{ lookup('env', 'PRIVATE_KEY')|default('~/.ssh/id_rsa', true) }}"
 
 #orchestration_user: "{{ lookup('env', 'ORCHESTRATION_USER')|default('root', true) }}"
 ###############################################################################
