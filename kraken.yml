@@ -1,5 +1,5 @@
 ---
-- hosts: Master
+- hosts: 3.91.216.113
   gather_facts: true
   #remote_user:  root
   #become: yes
