@@ -1,8 +1,7 @@
 ---
 - hosts: localhost
   gather_facts: true
-  #remote_user:  root
-  #become: yes
+  remote_user:  root
   vars_files:
    - kraken_vars.yml
 
