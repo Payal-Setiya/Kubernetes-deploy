@@ -9,7 +9,7 @@
   - name: Git clone kraken repository
     git:
       repo: "https://github.com/openshift-scale/kraken.git"
-      dest: .
+      dest: "/root/kraken"
       force: yes
 
   - name: Generate kraken config file
