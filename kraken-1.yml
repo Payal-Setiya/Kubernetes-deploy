@@ -1,0 +1,26 @@
+---
+- hosts: localhost
+  gather_facts: true
+  #remote_user: "{{ orchestration_user }}"
+  vars_files:
+   - kraken_vars.yml
+
+  tasks:
+  - name: Git clone kraken repository
+    git:
+      repo: https://github.com/openshift-scale/kraken.git
+      dest: .
+      force: yes
+
+  - name: Generate kraken config file
+    template:
+      src: kraken.j2
+      dest: "{{ kraken_config }}"
+
+  - name: Start injecting failures
+    shell: |
+      cd "{{ kraken_dir }}"
+      cp -r "{{ scenarios_folder_path }}"* scenarios/
+      unset CONFIG
+      python3 run_kraken.py
+    ignore_errors: yes
