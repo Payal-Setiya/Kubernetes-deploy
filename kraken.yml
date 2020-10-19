@@ -21,6 +21,6 @@
     shell: |
       cd "{{ kraken_dir }}"
       cp -r "{{ scenarios_folder_path }}"* scenarios/
-      unset CONFIG
-      python3 run_kraken.py
+      #unset CONFIG
+      python3 run_kraken.py --config /var/lib/jenkins/kraken/config/config.yaml
     ignore_errors: yes
